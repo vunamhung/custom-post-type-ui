@@ -19,11 +19,16 @@ class cptui_admin_ui {
 	 * Return an opening `<tr>` tag.
 	 *
 	 * @since 1.0.0
+	 * @since 1.4.0 Added attributes parameter.
 	 *
+	 * @param array $attributes Custom attributes to add to HTML.
 	 * @return string $value Opening `<tr>` tag with attributes.
 	 */
-	public function get_tr_start() {
-		return '<tr valign="top">';
+	public function get_tr_start( $attributes = array() ) {
+
+		$attributes_string = $this->get_custom_attributes( $attributes );
+
+		return '<tr valign="top" ' . $attributes_string . '>';
 	}
 
 	/**
@@ -41,11 +46,16 @@ class cptui_admin_ui {
 	 * Return an opening `<th>` tag.
 	 *
 	 * @since 1.0.0
+	 * @since 1.4.0 Added attributes parameter.
 	 *
+	 * @param array $attributes Custom attributes to add to HTML.
 	 * @return string $value Opening `<th>` tag with attributes.
 	 */
-	public function get_th_start() {
-		return '<th scope="row">';
+	public function get_th_start( $attributes = array() ) {
+
+		$attributes_string = $this->get_custom_attributes( $attributes );
+
+		return '<th scope="row" ' . $attributes_string . '>';
 	}
 
 	/**
@@ -63,11 +73,16 @@ class cptui_admin_ui {
 	 * Return an opening `<td>` tag.
 	 *
 	 * @since 1.0.0
+	 * @since 1.4.0 Added attributes parameter.
 	 *
+	 * @param array $attributes Custom attributes to add to HTML.
 	 * @return string $value Opening `<td>` tag.
 	 */
-	public function get_td_start() {
-		return '<td>';
+	public function get_td_start( $attributes = array() ) {
+
+		$attributes_string = $this->get_custom_attributes( $attributes );
+
+		return '<td ' . $attributes_string . '>';
 	}
 
 	/**
@@ -86,11 +101,13 @@ class cptui_admin_ui {
 	 *
 	 * @since 1.2.0
 	 * @since 1.3.0 Added $args parameter.
+	 * @since 1.4.0 Added $attributes parameter.
 	 *
-	 * @param array $args Array of arguments.
+	 * @param array $args       Array of arguments.
+	 * @param array $attributes Array of custom attributes for HTML.
 	 * @return string $value Opening `<fieldset>` tag.
 	 */
-	public function get_fieldset_start( $args = array() ) {
+	public function get_fieldset_start( $args = array(), $attributes = array() ) {
 		$fieldset = '<fieldset';
 
 		if ( ! empty( $args['id'] ) ) {
@@ -105,6 +122,9 @@ class cptui_admin_ui {
 		if ( ! empty( $args['aria-expanded'] ) ) {
 			$fieldset .= ' aria-expanded="' . $args['aria-expanded'] . '"';
 		}
+
+		$attributes_string = $this->get_custom_attributes( $attributes );
+		$fieldset .= ' ' . $attributes_string;
 
 		$fieldset .= ' tabindex="0">';
 
@@ -126,11 +146,16 @@ class cptui_admin_ui {
 	 * Return an opening `<legend>` tag.
 	 *
 	 * @since 1.3.0
+	 * @since 1.4.0 Added attributes parameter.
 	 *
+	 * @param array $attributes Customa attributes to add to HTML.
 	 * @return string
 	 */
-	public function get_legend_start() {
-		return '<legend>';
+	public function get_legend_start( $attributes = array() ) {
+
+		$attributes_string = $this->get_custom_attributes( $attributes );
+
+		return '<legend ' . $attributes_string . '>';
 	}
 
 	/**
