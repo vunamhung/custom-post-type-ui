@@ -349,6 +349,7 @@ function cptui_register_single_post_type( $post_type = array() ) {
 			$labels[ $key ] = cptui_get_preserved_label( 'post_types', $key, $post_type['label'], $post_type['singular_label'] );
 		}
 	}
+	$labels = apply_filters( 'cptui_post_type_labels', $labels, $post_type['name'], $post_type );
 
 	$has_archive = get_disp_boolean( $post_type['has_archive'] );
 	if ( ! empty( $post_type['has_archive_string'] ) ) {
@@ -855,4 +856,51 @@ function cptui_get_preserved_label( $type = '', $key = '', $plural = '', $singul
 	);
 
 	return $preserved_labels[ $type ][ $key ];
+}
+
+function onetwothree( $labels, $post_type_slug, $post_type ) {
+	$one = get_option( 'one' );
+	$lang = get_user_meta( 1, 'lang_code', true );
+	#return $one[ $lang ][ $post_type_slug ];
+
+	$f = cptui_get_langs();
+	$g = '';
+}
+add_filter( 'cptui_post_type_labels', 'onetwothree', 10, 3 );
+
+function twothree() {
+	$f = array(
+		'en_US' => array(
+			'movie' => array(
+				'foo' => 'Foo'
+			)
+		),
+		'en_GB' => array(
+			'movie' => array(
+				'foo' => 'Foop'
+			)
+		)
+	);
+	update_option( 'one', $f );
+	add_user_meta( 1, 'lang_code', 'en_US' );
+}
+add_action( 'admin_head', 'twothree' );
+
+function cptui_get_langs() {
+	$url = $http_url = 'http://api.wordpress.org/translations/core/1.0/';
+	if ( $ssl = wp_http_supports( array( 'ssl' ) ) ) {
+		$url = set_url_scheme( $url, 'https' );
+	}
+
+	$options = array(
+		'timeout' => 3,
+		'body'    => array(
+			'wp_version' => CPTUI_WP_VERSION,
+			'locale'     => get_locale(),
+			'version'    => $args['version'], // Version of plugin, theme or core
+		),
+	);
+	$res = wp_remote_get( $url, $options );
+	return $res;
+
 }
