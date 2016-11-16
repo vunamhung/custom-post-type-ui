@@ -111,6 +111,7 @@ function cptui_listings() {
 						$archive = get_post_type_archive_link( $post_type );
 					}
 					?>
+
 						<tr class="<?php echo esc_attr( $rowclass ); ?>">
 							<?php
 							$edit_path          = 'admin.php?page=cptui_manage_post_types&action=edit&cptui_post_type=' . $post_type;
