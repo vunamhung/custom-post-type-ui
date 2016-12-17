@@ -508,8 +508,6 @@ function cptui_get_single_post_type_registery( $post_type = array() ) {
  *
  * @since 1.0.0
  *
- * @internal
- *
  * @param array $postdata $_POST data as json. Optional.
  * @return mixed false on nothing to do, otherwise void.
  */
