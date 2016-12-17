@@ -54,5 +54,45 @@ class CPTUI_Import_JSON extends WP_CLI_Command {
 			WP_CLI::success( sprintf( __( 'Imported %s successfully', 'custom-post-type-ui' ), $this->type ) );
 		}
 	}
+
+	/**
+	 * Export CPTUI settings to file.
+	 * ## Options
+	 * [--type]
+	 * : Which settings to export. Available options are `post_type` and `taxonomy`.
+	 * [--dest-path]
+	 * : The path and file to export to. Relative to PWD.
+	 */
+	public function export( $args, $assoc_args ) {
+		$this->args       = $args;
+		$this->assoc_args = $assoc_args;
+
+		if ( ! isset( $this->assoc_args['type'] ) ) {
+			WP_CLI::error( __( 'Please provide whether you are exporting your post types or taxonomies', 'custom-post-type-ui' ) );
+		}
+
+		if ( ! isset( $this->assoc_args['dest-path'] ) ) {
+			WP_CLI::error( __( 'Please provide a path to export your data to.', 'custom-post-type-ui' ) );
+		}
+
+		$this->type = $assoc_args['type'];
+
+		if ( 'post_type' === $this->type ) {
+			$content = cptui_get_post_type_data();
+		}
+
+		if ( 'taxonomy' === $this->type ) {
+			$content = cptui_get_taxonomy_data();
+		}
+
+		$content = json_encode( $content );
+		$result  = file_put_contents( $this->assoc_args['dest-path'], $content );
+
+		if ( false === $result ) {
+			WP_CLI::error( __( 'Error saving data.', 'custom-post-type-ui' ) );
+		}
+
+		WP_CLI::success( __( 'Successfully saved data to file.', 'custom-post-type-ui' ) );
+	}
 }
 WP_CLI::add_command( 'cptui', 'CPTUI_Import_JSON' );
