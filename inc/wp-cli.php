@@ -15,7 +15,7 @@ class CPTUI_Import_JSON extends WP_CLI_Command {
 	 * ## Options
 	 * [--type]
 	 * : What type of import this is. Available options are `post_type` and `taxonomy`.
-	 * [--path]
+	 * [--data-path]
 	 * : The path to the file holding JSON data to import.
 	 */
 	public function import( $args, $assoc_args ) {
@@ -27,13 +27,13 @@ class CPTUI_Import_JSON extends WP_CLI_Command {
 			WP_CLI::error( __( 'Please provide whether you are importing post types or taxonomies', 'custom-post-type-ui' ) );
 		}
 
-		if ( ! isset( $this->assoc_args['path'] ) ) {
+		if ( ! isset( $this->assoc_args['data-path'] ) ) {
 			WP_CLI::error( __( 'Please provide a path to the file holding your CPTUI JSON data.', 'custom-post-type-ui' ) );
 		}
 
 		$this->type = $assoc_args['type'];
 
-		$json = file_get_contents( $this->assoc_args['path'] );
+		$json = file_get_contents( $this->assoc_args['data-path'] );
 
 		if ( empty( $json ) ) {
 			WP_CLI::error( __( 'No JSON data found', 'custom-post-type-ui' ) );
