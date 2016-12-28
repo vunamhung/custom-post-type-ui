@@ -195,7 +195,7 @@ function cptui_get_taxonomy_slugs() {
  * @since 1.3.0
  *
  * @param string $path URL path.
- * @return string|void
+ * @return string
  */
 function cptui_admin_url( $path ) {
 	if ( is_multisite() && is_network_admin() ) {
@@ -238,7 +238,7 @@ function cptui_post_form_action( $ui ) {
  *
  * @since 1.3.0
  *
- * @return mixed|void
+ * @return mixed
  */
 function cptui_get_post_type_data() {
 	return apply_filters( 'cptui_get_post_type_data', get_option( 'cptui_post_types', array() ), get_current_blog_id() );
@@ -249,7 +249,7 @@ function cptui_get_post_type_data() {
  *
  * @since 1.3.0
  *
- * @return mixed|void
+ * @return mixed
  */
 function cptui_get_taxonomy_data() {
 	return apply_filters( 'cptui_get_taxonomy_data', get_option( 'cptui_taxonomies', array() ), get_current_blog_id() );
@@ -262,7 +262,7 @@ function cptui_get_taxonomy_data() {
  *
  * @param string       $slug Post type slug to check. Optional. Default empty string.
  * @param array|string $data Post type data being utilized. Optional.
- * @return mixed|void
+ * @return mixed
  */
 function cptui_get_post_type_exists( $slug = '', $data = array() ) {
 
