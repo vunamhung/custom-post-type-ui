@@ -411,6 +411,15 @@ function cptui_manage_post_types() {
 								) );
 
 								echo $ui->get_text_input( array(
+									'labeltext' => esc_html__( 'View Items', 'custom-post-type-ui' ),
+									'helptext'  => esc_html__( 'Used in the admin bar when viewing editor screen for a published post in the post type.', 'custom-post-type-ui' ),
+									'namearray' => 'cpt_labels',
+									'name'      => 'view_items',
+									'textvalue' => ( isset( $current['labels']['view_items'] ) ) ? esc_attr( $current['labels']['view_items'] ) : '',
+									'aftertext' => esc_html__( '(e.g. View Movies)', 'custom-post-type-ui' ),
+								) );
+
+								echo $ui->get_text_input( array(
 									'labeltext' => esc_html__( 'Search Item', 'custom-post-type-ui' ),
 									'helptext'  => esc_html__( 'Used as the text for the search button on post type list screen.', 'custom-post-type-ui' ),
 									'namearray' => 'cpt_labels',
@@ -535,6 +544,15 @@ function cptui_manage_post_types() {
 									'name'      => 'items_list',
 									'textvalue' => ( isset( $current['labels']['items_list'] ) ) ? esc_attr( $current['labels']['items_list'] ) : '',
 									'aftertext' => esc_html__( '(e.g. Movies list)', 'custom-post-type-ui' ),
+								) );
+
+								echo $ui->get_text_input( array(
+									'labeltext' => esc_html__( 'Attributes', 'custom-post-type-ui' ),
+									'helptext'  => esc_html__( 'Used for the title of the post attributes meta box.', 'custom-post-type-ui' ),
+									'namearray' => 'cpt_labels',
+									'name'      => 'attributes',
+									'textvalue' => ( isset( $current['labels']['attributes'] ) ) ? esc_attr( $current['labels']['attributes'] ) : '',
+									'aftertext' => esc_html__( '(e.g. Movies Attributes)', 'custom-post-type-ui' ),
 								) );
 							?>
 						</table>
