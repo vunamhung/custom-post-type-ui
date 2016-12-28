@@ -310,7 +310,7 @@ function cptui_products_sidebar() {
 		}
 		printf(
 			'<p><a href="%s">%s</a></p>',
-			'https://pluginize.com/product/custom-post-type-ui-extended/?utm_source=remove_ads&utm_medium=text&utm_campaign=cptui',
+			'https://pluginize.com/plugins/custom-post-type-ui-extended/?utm_source=remove_ads&utm_medium=text&utm_campaign=cptui',
 			esc_html__( 'Remove these ads?', 'custom-post-type-ui' )
 		);
 	}
@@ -398,7 +398,7 @@ function cptui_get_ads() {
  */
 function cptui_default_ads( $ads = array() ) {
 	$ads[] = array(
-		'url'   => 'https://pluginize.com/product/custom-post-type-ui-extended/?utm_source=sidebar-v3&utm_medium=banner&utm_campaign=cptui',
+		'url'   => 'https://pluginize.com/plugins/custom-post-type-ui-extended/?utm_source=sidebar-v3&utm_medium=banner&utm_campaign=cptui',
 		'image' => plugin_dir_url( dirname( __FILE__ ) ) . 'images/wds_ads/cptuix-ad-3.png',
 		'text'  => 'Custom Post Type UI Extended product ad',
 	);

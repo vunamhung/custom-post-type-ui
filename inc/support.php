@@ -59,7 +59,7 @@ function cptui_support() {
 			esc_html__( 'Please note that %s this plugin will not handle display %s of registered post types or taxonomies in your current theme. It simply registers them for you. To display your data, check out %s. If all else fails, visit us on the %s', 'custom-post-type-ui' ),
 			'<strong>',
 			'</strong>',
-			'<a href="https://pluginize.com/product/custom-post-type-ui-extended/?utm_source=faq&utm_medium=text&utm_campaign=cptui">' . esc_html__( 'CPTUI Extended' ) . '</a>',
+			'<a href="https://pluginize.com/plugins/custom-post-type-ui-extended/?utm_source=faq&utm_medium=text&utm_campaign=cptui">' . esc_html__( 'CPTUI Extended' ) . '</a>',
 			'<a href="https://www.wordpress.org/support/plugin/custom-post-type-ui/">' . esc_html__( 'Support Forums', 'custom-post-type-ui' ) . '</a>'
 		); ?></p>
 
@@ -89,7 +89,7 @@ function cptui_support() {
 								printf(
 									esc_html__( 'You can have them automatically removed from display via a purchased copy of %s.', 'custom-post-type-ui' ),
 									sprintf( '<a href="%s">%s</a>',
-										'https://pluginize.com/product/custom-post-type-ui-extended/?utm_source=faq-remove&utm_medium=text&utm_campaign=cptui',
+										'https://pluginize.com/plugins/custom-post-type-ui-extended/?utm_source=faq-remove&utm_medium=text&utm_campaign=cptui',
 										'Custom Post Type UI Extended'
 									)
 								); ?>
@@ -177,7 +177,7 @@ function cptui_support() {
 								printf(
 									esc_html__( 'We encourage checking out %s for easily displaying post type content wherever you can utilize a shortcode. If you prefer to handle on your own, you will need to utilize the %s class to handle display in custom locations. If you have set the post type to have archives, the archive url should be something like "http://www.mysite.com/post-type-slug"', 'custom-post-type-ui' ),
 									sprintf( '<a href="%s">%s</a>',
-										'https://pluginize.com/product/custom-post-type-ui-extended/?utm_source=faq&utm_medium=text&utm_campaign=cptui',
+										'https://pluginize.com/plugins/custom-post-type-ui-extended/?utm_source=faq&utm_medium=text&utm_campaign=cptui',
 										'Custom Post Type UI Extended'
 									),
 									'<a href="https://codex.wordpress.org/Class_Reference/WP_Query" target="_blank">WP_Query</a>'
