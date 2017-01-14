@@ -56,29 +56,20 @@ function cptui_settings() {
 		 */
 		do_action( 'cptui_main_page_before_changelog' ); ?>
 
-		<h2><?php printf( esc_html__( 'What\'s new in version %s', 'custom-post-type-ui' ), CPTUI_VERSION ); ?></h2>
+		<h2><?php printf( esc_html__( "What's new in version %s", 'custom-post-type-ui' ), CPTUI_VERSION ); ?></h2>
 		<div class="changelog about-integrations">
 			<div class="cptui-feature feature-section col three-col">
 				<div>
-					<h2><?php esc_html_e( 'Evolved UI for Custom Post Type UI', 'custom-post-type-ui' ); ?></h2>
-					<p><?php esc_html_e( 'Once again we have evolved the UI for post type and taxonomy parameter screens. We strive to adhere to familiar WordPress admin familiarity and have adapted styles and UX applied to WordPress metaboxes.' ) ?></p>
+					<h2><?php esc_html_e( 'Renamed the Import/Export menu.', 'custom-post-type-ui' ); ?></h2>
+					<p><?php esc_html_e( 'As Custom Post Type UI has evolved, we have found need to rename one of the menus. The Import/Export menu has now been renamed "Tools" to better reflect the utilities provided there.', 'custom-post-type-ui' ); ?></p>
 				</div>
 				<div>
-					<h2><?php esc_html_e( 'Eliminated page refresh need.', 'custom-post-type-ui' ); ?></h2>
-					<p><?php esc_html_e( 'Previously, due to how settings were saved, there was need for an extra refresh for newly saved settings to be applied to a post type or taxonomy. Under the hood, we have amended the saving process in order to remove need to trigger a refresh to see applied changes.' ) ?></p>
-				</div>
-				<h2><?php esc_html_e( 'From our previous release:', 'custom-post-type-ui' ); ?></h2>
-				<div>
-					<h2><?php _e( 'Slug prevention measures', 'custom-post-type-ui' ); ?></h2>
-					<p><?php _e( 'We added measures on the post type and taxonomy slug inputs to prevent using characters that should not be used in slugs. This is primarily for when adding new post types and taxonomies, but will also affect when editing existing options. Do not hesitate to contact support if you are experiencing issues.' ) ?></p>
-				</div>
-				<div>
-					<h2><?php _e( 'Improved rewrite rules flushing', 'custom-post-type-ui' ); ?></h2>
-					<p><?php _e( 'We improved what we do after registering a new post type or taxonomy to better prevent having to manually flush rewrite rules.' ) ?></p>
+					<h2><?php esc_html_e( 'Eliminated page refresh need for importing.', 'custom-post-type-ui' ); ?></h2>
+					<p><?php esc_html_e( 'Previously we eliminated page refresh need while creating new post types and taxonomies. We noticed this did not apply when importing settings. With this latest release, we have amended the issue.', 'custom-post-type-ui' ); ?></p>
 				</div>
 				<div class="last-feature">
-					<h2><?php _e( 'Continued accessibility improvements', 'custom-post-type-ui' ); ?></h2>
-					<p><?php _e( 'We have continued working on the accessibility of the plugin, building off what we accomplished in previous releases. If you have feedback on where it could be further improved, let us know.' ) ?></p>
+					<h2><?php esc_html_e( 'Multiple issue fixes.', 'custom-post-type-ui' ); ?></h2>
+					<p><?php esc_html_e( 'We have fixed the following issues in this version. Added "action" as a reserved taxonomy name. Updated `get_terms()` handling for WordPress 4.5. Fixed PHP notices related to rewrite indexes, that were present since version 1.0.6. Prevented triggering a slug conversion when tabbing through the edit screen.', 'custom-post-type-ui' ) ?></p>
 				</div>
 			</div>
 		</div>

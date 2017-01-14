@@ -55,11 +55,12 @@ function cptui_support() {
 
 		<h1><?php esc_html_e( 'Custom Post Type UI Support', 'custom-post-type-ui' ); ?></h1>
 
-		<p><?php printf(
+		<p>
+		<?php printf(
 			esc_html__( 'Please note that %s this plugin will not handle display %s of registered post types or taxonomies in your current theme. It simply registers them for you. To display your data, check out %s. If all else fails, visit us on the %s', 'custom-post-type-ui' ),
 			'<strong>',
 			'</strong>',
-			'<a href="https://pluginize.com/product/custom-post-type-ui-extended/?utm_source=faq&utm_medium=text&utm_campaign=cptui">' . esc_html__( 'CPTUI Extended' ) . '</a>',
+			'<a href="https://pluginize.com/plugins/custom-post-type-ui-extended/?utm_source=faq&utm_medium=text&utm_campaign=cptui">' . esc_html__( 'CPTUI Extended' ) . '</a>',
 			'<a href="https://www.wordpress.org/support/plugin/custom-post-type-ui/">' . esc_html__( 'Support Forums', 'custom-post-type-ui' ) . '</a>'
 		); ?></p>
 
@@ -85,11 +86,12 @@ function cptui_support() {
 						</li>
 						<li>
 							<span tabindex="0" class="question" aria-controls="q4" aria-expanded="false"><?php esc_html_e( 'How can I remove the ads that suddenly started showing up?', 'custom-post-type-ui' ); ?></span>
-							<div class="answer" id="q4"><?php
+							<div class="answer" id="q4">
+								<?php
 								printf(
 									esc_html__( 'You can have them automatically removed from display via a purchased copy of %s.', 'custom-post-type-ui' ),
 									sprintf( '<a href="%s">%s</a>',
-										'https://pluginize.com/product/custom-post-type-ui-extended/?utm_source=faq-remove&utm_medium=text&utm_campaign=cptui',
+										'https://pluginize.com/plugins/custom-post-type-ui-extended/?utm_source=faq-remove&utm_medium=text&utm_campaign=cptui',
 										'Custom Post Type UI Extended'
 									)
 								); ?>
@@ -163,7 +165,8 @@ function cptui_support() {
 					<ol id="questions_front">
 						<li>
 							<span tabindex="0" class="question" aria-controls="q15" aria-expanded="false"><?php esc_html_e( 'What template files should I edit to alter my post type display?', 'custom-post-type-ui' ); ?></span>
-							<div class="answer" id="q15"><?php
+							<div class="answer" id="q15">
+								<?php
 								printf(
 									esc_html__( 'Please visit the %sTemplate Hierarchy%s page on the WordPress codex for details about available templates.', 'custom-post-type-ui' ),
 									'<a href="https://codex.wordpress.org/Template_Hierarchy" target="_blank">',
@@ -173,11 +176,12 @@ function cptui_support() {
 						</li>
 						<li>
 							<span tabindex="0" class="question" aria-controls="q16" aria-expanded="false"><?php esc_html_e( 'How do I display my custom post type on my site?', 'custom-post-type-ui' ); ?></span>
-							<div class="answer" id="q16"><?php
+							<div class="answer" id="q16">
+								<?php
 								printf(
 									esc_html__( 'We encourage checking out %s for easily displaying post type content wherever you can utilize a shortcode. If you prefer to handle on your own, you will need to utilize the %s class to handle display in custom locations. If you have set the post type to have archives, the archive url should be something like "http://www.mysite.com/post-type-slug"', 'custom-post-type-ui' ),
 									sprintf( '<a href="%s">%s</a>',
-										'https://pluginize.com/product/custom-post-type-ui-extended/?utm_source=faq&utm_medium=text&utm_campaign=cptui',
+										'https://pluginize.com/plugins/custom-post-type-ui-extended/?utm_source=faq&utm_medium=text&utm_campaign=cptui',
 										'Custom Post Type UI Extended'
 									),
 									'<a href="https://codex.wordpress.org/Class_Reference/WP_Query" target="_blank">WP_Query</a>'
@@ -186,9 +190,12 @@ function cptui_support() {
 						</li>
 						<li>
 							<span tabindex="0" class="question" aria-controls="q17" aria-expanded="false"><?php esc_html_e( 'I have added categories and tags to my custom post type, but they do not appear in the archives.', 'custom-post-type-ui' ); ?></span>
-							<div class="answer" id="q17"><?php printf( esc_html__( 'You will need to add your newly created post type to the types that the category and tag archives query for. You can see a tutorial on how to do that at %s', 'custom-post-type-ui' ),
-								'<a href="http://docs.pluginize.com/article/17-post-types-in-category-tag-archives" target="_blank">http://docs.pluginize.com/article/17-post-types-in-category-tag-archives</a>'
-							); ?> </div>
+							<div class="answer" id="q17">
+								<?php
+								printf(
+									esc_html__( 'You will need to add your newly created post type to the types that the category and tag archives query for. You can see a tutorial on how to do that at %s', 'custom-post-type-ui' ),
+									'<a href="http://docs.pluginize.com/article/17-post-types-in-category-tag-archives" target="_blank">http://docs.pluginize.com/article/17-post-types-in-category-tag-archives</a>'
+								); ?> </div>
 						</li>
 					</ol>
 				</td>
@@ -197,7 +204,8 @@ function cptui_support() {
 					<ol id="questions_advanced">
 						<li>
 							<span tabindex="0" class="question" aria-controls="q18" aria-expanded="false"><?php esc_html_e( 'How do I add custom metaboxes to my post type?', 'custom-post-type-ui' ); ?></span>
-							<div class="answer" id="q18"><?php
+							<div class="answer" id="q18">
+								<?php
 								printf(
 									esc_html__( 'We recommend checking out %s, the latest iteration of "Custom Metaboxes and Fields for WordPress". Both are maintained by WebDevStudios.', 'custom-post-type-ui' ),
 									'<a href="https://wordpress.org/plugins/cmb2/" target="_blank">CMB2</a>'
@@ -206,7 +214,8 @@ function cptui_support() {
 						</li>
 						<li>
 							<span tabindex="0" class="question" aria-controls="q19" aria-expanded="false"><?php esc_html_e( 'How do I add a newly registered taxonomy to a post type that already exists?', 'custom-post-type-ui' ); ?></span>
-							<div class="answer" id="q19"><?php
+							<div class="answer" id="q19">
+								<?php
 								printf(
 									esc_html__( 'Check out the %s function for documentation and usage examples.', 'custom-post-type-ui' ),
 									'<a href="https://codex.wordpress.org/Function_Reference/register_taxonomy_for_object_type" target="_blank">register_taxonomy_for_object_type()</a>'
@@ -215,7 +224,8 @@ function cptui_support() {
 						</li>
 						<li>
 							<span tabindex="0" class="question" aria-controls="q20" aria-expanded="false"><?php esc_html_e( 'Post relationships?', 'custom-post-type-ui' ); ?></span>
-							<div class="answer" id="q20"><?php
+							<div class="answer" id="q20">
+								<?php
 								printf(
 									esc_html__( '%s has an excellent %spost%s introducing users to the %sPosts 2 Posts%s plugin that should be a good start.', 'custom-post-type-ui' ),
 									'Pippin Williamson',

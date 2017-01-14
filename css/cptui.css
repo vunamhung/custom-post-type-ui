@@ -144,6 +144,10 @@
   margin-top: 0;
 }
 
+.about-wrap .changelog h2 {
+  text-align: center;
+}
+
 .about-wrap .feature-rest div {
   width: 50% !important;
   padding-right: 100px;
@@ -322,7 +326,8 @@ fieldset .cptui-help {
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
   -ms-flex-item-align: auto;
-  align-self: auto;
+  -ms-grid-row-align: auto;
+      align-self: auto;
 }
 
 .wdspromos-about a:nth-child(2) {
@@ -331,7 +336,8 @@ fieldset .cptui-help {
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
   -ms-flex-item-align: auto;
-  align-self: auto;
+  -ms-grid-row-align: auto;
+      align-self: auto;
 }
 
 .wdspromos-about a:nth-child(3) {
@@ -340,7 +346,8 @@ fieldset .cptui-help {
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
   -ms-flex-item-align: auto;
-  align-self: auto;
+  -ms-grid-row-align: auto;
+      align-self: auto;
 }
 
 .no-js #cptui_choose_icon {
