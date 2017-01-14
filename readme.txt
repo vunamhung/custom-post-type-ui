@@ -30,7 +30,7 @@ Official development of Custom Post Type UI is on GitHub, with official stable r
 
 == Changelog ==
 
-= 1.5.0 - TBD =
+= 1.5.0 - 2017-1-10 =
 * Added: Helper functions to grab individual post types or taxonomies from CPTUI options, function to check for support for custom saved values.
 * Added: Helper functions to mark and check if a new CPTUI install.
 * Added: FAQ clarifying why post type/taxonomy slugs are forced to underscores. We mean well, I assure you.
@@ -82,7 +82,7 @@ Official development of Custom Post Type UI is on GitHub, with official stable r
 
 == Upgrade Notice ==
 
-= 1.5.0 - TBD =
+= 1.5.0 - 2017-1-10 =
 * Added: Helper functions to grab individual post types or taxonomies from CPTUI options, function to check for support for custom saved values.
 * Added: Helper functions to mark and check if a new CPTUI install.
 * Added: FAQ clarifying why post type/taxonomy slugs are forced to underscores. We mean well, I assure you.
