@@ -30,6 +30,9 @@ Official development of Custom Post Type UI is on GitHub, with official stable r
 
 == Changelog ==
 
+= 1.6.0 - TBD =
+* Added: Initial WP-CLI support for importing/exporting settings.
+
 = 1.5.0 - 2017-1-10 =
 * Added: Helper functions to grab individual post types or taxonomies from CPTUI options, function to check for support for custom saved values.
 * Added: Helper functions to mark and check if a new CPTUI install.
