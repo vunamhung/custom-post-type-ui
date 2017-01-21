@@ -82,7 +82,6 @@ class CPTUI_Utility extends CPTUI_Base_Tests {
 		$this->assertEquals( 'All Movies', $movie->labels->all_items );
 		$this->assertEquals( 'Add New', $movie->labels->add_new );
 		$this->assertEquals( 'Add New Movie', $movie->labels->add_new_item );
-		$this->assertEquals( 'Edit', $movie->labels->edit );
 		$this->assertEquals( 'Edit Movie', $movie->labels->edit_item );
 		$this->assertEquals( 'New Movie', $movie->labels->new_item );
 		$this->assertEquals( 'View', $movie->labels->view );
@@ -310,7 +309,7 @@ class CPTUI_Utility extends CPTUI_Base_Tests {
 	 * Handle registering our plugin's taxonomy registration function.
 	 */
 	public function register_taxonomy() {
-		cptui_register_single_taxonomy( $this->taxonomy_array['actors'] );
+		cptui_register_single_taxonomy( $this->taxonomy_array['actor'] );
 	}
 
 	/**
