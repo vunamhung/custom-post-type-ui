@@ -37,7 +37,7 @@ class CPTUI_Utility extends CPTUI_Base_Tests {
 	 */
 	public function removePostTypeTax() {
 		_unregister_post_type( 'movie' );
-		_unregister_taxonomy( 'actors' );
+		_unregister_taxonomy( 'actor' );
 	}
 
 	/**
@@ -97,7 +97,7 @@ class CPTUI_Utility extends CPTUI_Base_Tests {
 	 */
 	public function test_CPTUI_set_taxonomy_option() {
 		$this->assertTrue( is_array( $this->taxonomy_array ), 'Option returned false' );
-		$this->assertArrayHasKey( 'actors', $this->taxonomy_array, 'Actors was not found in returned option value' );
+		$this->assertArrayHasKey( 'actor', $this->taxonomy_array, 'Actors was not found in returned option value' );
 	}
 
 	/**
@@ -115,7 +115,7 @@ class CPTUI_Utility extends CPTUI_Base_Tests {
 		$this->register_taxonomy();
 
 		$registered = get_taxonomies();
-		$this->assertArrayHasKey( 'actors', $registered );
+		$this->assertArrayHasKey( 'actor', $registered );
 	}
 
 	/**
@@ -125,7 +125,7 @@ class CPTUI_Utility extends CPTUI_Base_Tests {
 		$this->register_post_type();
 		$this->register_taxonomy();
 
-		$actor = get_taxonomy( 'actors' );
+		$actor = get_taxonomy( 'actor' );
 		$this->assertTrue( is_object( $actor ) );
 		$this->assertTrue( is_object( $actor->labels ) );
 		$this->assertNotEmpty( $actor->labels, 'No labels available' );
