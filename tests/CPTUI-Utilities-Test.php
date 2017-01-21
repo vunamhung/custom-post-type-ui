@@ -84,7 +84,6 @@ class CPTUI_Utility extends CPTUI_Base_Tests {
 		$this->assertEquals( 'Add New Movie', $movie->labels->add_new_item );
 		$this->assertEquals( 'Edit Movie', $movie->labels->edit_item );
 		$this->assertEquals( 'New Movie', $movie->labels->new_item );
-		$this->assertEquals( 'View', $movie->labels->view );
 		$this->assertEquals( 'View Movie', $movie->labels->view_item );
 		$this->assertEquals( 'Search Movies', $movie->labels->search_items );
 		$this->assertEquals( 'No Movies Found', $movie->labels->not_found );
