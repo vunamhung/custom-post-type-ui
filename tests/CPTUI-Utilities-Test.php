@@ -143,7 +143,7 @@ class CPTUI_Utility extends CPTUI_Base_Tests {
 		$this->assertEquals( 'Parent Actor:', $actor->labels->parent_item_colon );
 		$this->assertEquals( 'Search Actors', $actor->labels->search_items );
 		$this->assertEquals( 'Popular Actors', $actor->labels->popular_items );
-		$this->assertEquals( 'Separate Actors with commas', $actor->labels->separate_items_with_commas );
+		$this->assertEquals( 'Separate Actors with Commas', $actor->labels->separate_items_with_commas );
 		$this->assertEquals( 'Add or remove Actors', $actor->labels->add_or_remove_items );
 		$this->assertEquals( 'Choose from the most used Actors', $actor->labels->choose_from_most_used );
 		$this->assertEquals( 'No Actors found', $actor->labels->not_found );
