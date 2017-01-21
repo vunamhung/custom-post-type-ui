@@ -51,7 +51,7 @@ postboxes.add_postbox_toggles(pagenow);
 	$('#name').on('keyup',function(e){
 
 		var value = $(this).val();
-		if ( e.keyCode !== 9 ) {
+		if ( e.keyCode !== 9 && e.keyCode !== 37 && e.keyCode !== 38 && e.keyCode !== 39 && e.keyCode !== 40 ) {
 			value = value.replace(/ /g, "_");
 			value = value.toLowerCase();
 			value = replaceDiacritics(value);
