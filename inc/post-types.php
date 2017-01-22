@@ -637,6 +637,29 @@ function cptui_manage_post_types() {
 
 							$select = array(
 								'options' => array(
+									array(
+										'attr'    => '0',
+										'text'    => esc_attr__( 'False', 'custom-post-type-ui' ),
+										'default' => 'false',
+									),
+									array(
+										'attr' => '1',
+										'text' => esc_attr__( 'True', 'custom-post-type-ui' ),
+									),
+								),
+							);
+							$selected = ( isset( $current ) && ! empty( $current['delete_with_user'] ) ) ? disp_boolean( $current['delete_with_user'] ) : '';
+							$select['selected'] = ( ! empty( $selected ) && ! empty( $current['delete_with_user'] ) ) ? $current['delete_with_user'] : '';
+							echo $ui->get_select_input( array(
+								'namearray'  => 'cpt_custom_post_type',
+								'name'       => 'delete_with_user',
+								'labeltext'  => esc_html__( 'Delete with user', 'custom-post-type-ui' ),
+								'aftertext'  => esc_html__( '(CPTUI default: false) Whether to delete posts of this type when deleting a user.', 'custom-post-type-ui' ),
+								'selections' => $select,
+							) );
+
+							$select = array(
+								'options' => array(
 									array( 'attr' => '0', 'text' => esc_attr__( 'False', 'custom-post-type-ui' ), 'default' => 'false' ),
 									array( 'attr' => '1', 'text' => esc_attr__( 'True', 'custom-post-type-ui' ) ),
 								),
@@ -1421,6 +1444,7 @@ function cptui_update_post_type( $data = array() ) {
 		'publicly_queryable'  => disp_boolean( $data['cpt_custom_post_type']['publicly_queryable'] ),
 		'show_ui'             => disp_boolean( $data['cpt_custom_post_type']['show_ui'] ),
 		'show_in_nav_menus'   => disp_boolean( $data['cpt_custom_post_type']['show_in_nav_menus'] ),
+		'delete_with_user'    => disp_boolean( $data['cpt_custom_post_type']['delete_with_user'] ),
 		'show_in_rest'        => disp_boolean( $data['cpt_custom_post_type']['show_in_rest'] ),
 		'rest_base'           => $rest_base,
 		'has_archive'         => disp_boolean( $data['cpt_custom_post_type']['has_archive'] ),
