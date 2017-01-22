@@ -391,6 +391,10 @@ function cptui_register_single_post_type( $post_type = array() ) {
 	if ( ! empty( $post_type['menu_position'] ) ) {
 		$menu_position = (int) $post_type['menu_position'];
 	}
+	$delete_with_user = null;
+	if ( ! empty( $post_type['delete_with_user'] ) ) {
+		$delete_with_user = get_disp_boolean( $post_type['delete_with_user'] );
+	}
 
 	$public = get_disp_boolean( $post_type['public'] );
 	if ( ! empty( $post_type['exclude_from_search'] ) ) {
@@ -424,6 +428,7 @@ function cptui_register_single_post_type( $post_type = array() ) {
 		'show_in_nav_menus'   => get_disp_boolean( $post_type['show_in_nav_menus'] ),
 		'has_archive'         => $has_archive,
 		'show_in_menu'        => $show_in_menu,
+		'delete_with_user'    => $delete_with_user,
 		'show_in_rest'        => get_disp_boolean( $post_type['show_in_rest'] ),
 		'rest_base'           => $rest_base,
 		'exclude_from_search' => $exclude_from_search,
