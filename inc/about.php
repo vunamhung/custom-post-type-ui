@@ -146,7 +146,6 @@ add_action( 'cptui_main_page_before_changelog', 'cptui_about_page_newsletter' );
 function cptui_about_page_newsletter_form() {
 	?>
 	<!-- Begin MailChimp Signup Form -->
-	<link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
 	<div id="mc_embed_signup">
 		<form action="//webdevstudios.us1.list-manage.com/subscribe/post?u=67169b098c99de702c897d63e&amp;id=9cb1c7472e" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
 			<div id="mc_embed_signup_scroll">
