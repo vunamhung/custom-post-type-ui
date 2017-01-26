@@ -1091,10 +1091,11 @@ function cptui_manage_post_types() {
 							unset( $add_taxes['post_format'] );
 							foreach ( $add_taxes as $add_tax ) {
 
-								$core_label = ( in_array( $add_tax->name, array( 'category', 'post_tag' ) ) ) ? __( '(WP Core)', 'custom-post-type-ui' ) : '';
+								$core_label = ( in_array( $add_tax->name, array( 'category', 'post_tag' ) ) ) ? esc_html__( '(WP Core)', 'custom-post-type-ui' ) : '';
 								echo $ui->get_check_input( array(
 									'checkvalue' => $add_tax->name,
 									'checked'    => ( ! empty( $current['taxonomies'] ) && is_array( $current['taxonomies'] ) && in_array( $add_tax->name, $current['taxonomies'] ) ) ? 'true' : 'false',
+
 									'name'       => $add_tax->name,
 									'namearray'  => 'cpt_addon_taxes',
 									'textvalue'  => $add_tax->name,
