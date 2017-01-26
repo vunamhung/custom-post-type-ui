@@ -635,17 +635,17 @@ function cptui_settings_tab_menu( $page = 'post_types' ) {
 	if ( ! empty( $tabs['page_title'] ) ) {
 		printf(
 			'<h1>%s</h1><h2 class="nav-tab-wrapper">',
-			$tabs['page_title']
+			esc_html( $tabs['page_title'] )
 		);
 	}
 
 	foreach ( $tabs['tabs'] as $tab ) {
 		printf(
 			'<a class="%s" href="%s" aria-selected="%s">%s</a>',
-			implode( ' ', $tab['classes'] ),
-			$tab['url'],
-			$tab['aria-selected'],
-			$tab['text']
+			esc_attr( implode( ' ', $tab['classes'] ) ),
+			esc_url( $tab['url'] ),
+			esc_attr( $tab['aria-selected'] ),
+			esc_html( $tab['text'] )
 		);
 	}
 
