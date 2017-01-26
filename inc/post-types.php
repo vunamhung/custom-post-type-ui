@@ -1087,7 +1087,8 @@ function cptui_manage_post_types() {
 							}
 
 							$add_taxes = get_taxonomies( $args, 'objects' );
-							unset( $add_taxes['nav_menu'] ); unset( $add_taxes['post_format'] );
+							unset( $add_taxes['nav_menu'] );
+							unset( $add_taxes['post_format'] );
 							foreach ( $add_taxes as $add_tax ) {
 
 								$core_label = ( in_array( $add_tax->name, array( 'category', 'post_tag' ) ) ) ? __( '(WP Core)', 'custom-post-type-ui' ) : '';
