@@ -321,6 +321,17 @@ add_action( 'cptui_below_post_type_tab_menu', 'cptui_products_sidebar' );
 add_action( 'cptui_below_taxonomy_tab_menu', 'cptui_products_sidebar' );
 
 /**
+ * Enqueue the CSS instead of inline style it.
+ *
+ * @since 1.6.0
+ */
+function cptui_newsletter_form_enqueue() {
+	wp_enqueue_style( 'mailchimp', '//cdn-images.mailchimp.com/embedcode/classic-10_7.css' );
+	wp_enqueue_script( 'mailchimp-js', '//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js' );
+}
+add_action( 'admin_enqueue_scripts', 'cptui_newsletter_form_enqueue' );
+
+/**
  * Outputs our newsletter signup form.
  *
  * @since 1.3.4
