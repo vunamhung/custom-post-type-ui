@@ -1122,8 +1122,8 @@ function cptui_manage_post_types() {
 			do_action( 'cptui_post_type_after_fieldsets', $ui ); ?>
 
 			<p>
-			<?php
-				if ( ! empty( $_GET ) && ! empty( $_GET['action'] ) && 'edit' == $_GET['action'] ) {
+				<?php
+				if ( ! empty( $_GET ) && ! empty( $_GET['action'] ) && 'edit' === $_GET['action'] ) {
 					/**
 					 * Filters the text value to use on the button when editing.
 					 *
