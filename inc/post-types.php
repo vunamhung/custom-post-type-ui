@@ -913,7 +913,7 @@ function cptui_manage_post_types() {
 							}
 							echo $ui->get_check_input( array(
 								'checkvalue' => 'title',
-								'checked'    => $title_checked,
+								'checked'    => esc_attr( $title_checked ),
 								'name'       => 'title',
 								'namearray'  => 'cpt_supports',
 								'textvalue'  => 'title',
@@ -928,7 +928,7 @@ function cptui_manage_post_types() {
 							}
 							echo $ui->get_check_input( array(
 								'checkvalue' => 'editor',
-								'checked'    => $editor_checked,
+								'checked'    => esc_attr( $editor_checked ),
 								'name'       => 'editor',
 								'namearray'  => 'cpt_supports',
 								'textvalue'  => 'editor',
@@ -943,7 +943,7 @@ function cptui_manage_post_types() {
 							}
 							echo $ui->get_check_input( array(
 								'checkvalue' => 'thumbnail',
-								'checked'    => $thumb_checked,
+								'checked'    => esc_attr( $thumb_checked ),
 								'name'       => 'thumbnail',
 								'namearray'  => 'cpt_supports',
 								'textvalue'  => 'thumbnail',
