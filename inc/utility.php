@@ -476,12 +476,14 @@ function cptui_admin_notices_helper( $message = '', $success = true ) {
  * @return string
  */
 function cptui_get_object_from_post_global() {
-	if ( isset( $_POST['cpt_custom_post_type']['name'] ) ) {
-		return sanitize_text_field( $_POST['cpt_custom_post_type']['name'] );
+	$post_type = sanitize_text_field( $_POST['cpt_custom_post_type']['name'] );
+	if ( ! empty( $post_type ) && isset( $post_type ) ) {
+		return $post_type;
 	}
 
-	if ( isset( $_POST['cpt_custom_tax']['name'] ) ) {
-		return sanitize_text_field( $_POST['cpt_custom_tax']['name'] );
+	$taxonomy = sanitize_text_field( $_POST['cpt_custom_tax']['name'] );
+	if ( ! empty( $taxonomy ) && isset( $taxonomy ) ) {
+		return $taxonomy;
 	}
 
 	return esc_html__( 'Object', 'custom-post-type-ui' );
