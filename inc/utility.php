@@ -340,7 +340,6 @@ add_action( 'admin_enqueue_scripts', 'cptui_newsletter_form_enqueue' );
 function cptui_newsletter_form() {
 	?>
 <!-- Begin MailChimp Signup Form -->
-<link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
 <div id="mc_embed_signup">
 	<form action="//webdevstudios.us1.list-manage.com/subscribe/post?u=67169b098c99de702c897d63e&amp;id=9cb1c7472e" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
 		<div id="mc_embed_signup_scroll">
@@ -361,7 +360,6 @@ function cptui_newsletter_form() {
 		</div>
 	</form>
 </div>
-<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
 <script type='text/javascript'>(function ($) {
 		window.fnames = new Array();
 		window.ftypes = new Array();
