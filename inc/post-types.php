@@ -55,7 +55,7 @@ add_action( 'admin_enqueue_scripts', 'cptui_post_type_enqueue_scripts' );
  */
 function cptui_post_type_tabs( $tabs = array(), $current_page = '' ) {
 
-	if ( 'post_types' == $current_page ) {
+	if ( 'post_types' === $current_page ) {
 		$post_types = cptui_get_post_type_data();
 		$classes    = array( 'nav-tab' );
 
@@ -147,7 +147,7 @@ function cptui_manage_post_types() {
 	 */
 	do_action( 'cptui_below_post_type_tab_menu' );
 
-	if ( 'edit' == $tab ) {
+	if ( 'edit' === $tab ) {
 
 		$post_types = cptui_get_post_type_data();
 
@@ -908,7 +908,7 @@ function cptui_manage_post_types() {
 							echo $ui->get_th_end() . $ui->get_td_start() . $ui->get_fieldset_start();
 
 							$title_checked = ( ! empty( $current['supports'] ) && is_array( $current['supports'] ) && in_array( 'title', $current['supports'] ) ) ? 'true' : 'false';
-							if ( 'new' == $tab ) {
+							if ( 'new' === $tab ) {
 								$title_checked = 'true';
 							}
 							echo $ui->get_check_input( array(
@@ -923,7 +923,7 @@ function cptui_manage_post_types() {
 							) );
 
 							$editor_checked = ( ! empty( $current['supports'] ) && is_array( $current['supports'] ) && in_array( 'editor', $current['supports'] ) ) ? 'true' : 'false';
-							if ( 'new' == $tab ) {
+							if ( 'new' === $tab ) {
 								$editor_checked = 'true';
 							}
 							echo $ui->get_check_input( array(
@@ -938,7 +938,7 @@ function cptui_manage_post_types() {
 							) );
 
 							$thumb_checked = ( ! empty( $current['supports'] ) && is_array( $current['supports'] ) && in_array( 'thumbnail', $current['supports'] ) ) ? 'true' : 'false';
-							if ( 'new' == $tab ) {
+							if ( 'new' === $tab ) {
 								$thumb_checked = 'true';
 							}
 							echo $ui->get_check_input( array(
@@ -1335,7 +1335,7 @@ function cptui_update_post_type( $data = array() ) {
 		return cptui_admin_notices( 'error', '', false, __( 'Please provide a post type name', 'custom-post-type-ui' ) );
 	}
 
-	if ( ! empty( $data['cpt_original'] ) && $data['cpt_original'] != $data['cpt_custom_post_type']['name'] ) {
+	if ( ! empty( $data['cpt_original'] ) && $data['cpt_original'] !== $data['cpt_custom_post_type']['name'] ) {
 		if ( ! empty( $data['update_post_types'] ) ) {
 			add_filter( 'cptui_convert_post_type_posts', '__return_true' );
 		}
@@ -1373,7 +1373,7 @@ function cptui_update_post_type( $data = array() ) {
 	 */
 	$slug_exists = apply_filters( 'cptui_post_type_slug_exists', false, $data['cpt_custom_post_type']['name'], $post_types );
 	$slug_as_page = cptui_check_page_slugs( $data['cpt_custom_post_type']['name'] );
-	if ( 'new' == $data['cpt_type_status'] ) {
+	if ( 'new' === $data['cpt_type_status'] ) {
 		if ( true === $slug_exists ) {
 			add_filter( 'cptui_custom_error_message', 'cptui_slug_matches_post_type' );
 			return 'error';
@@ -1493,7 +1493,7 @@ function cptui_update_post_type( $data = array() ) {
 	set_transient( 'cptui_flush_rewrite_rules', 'true', 5 * 60 );
 
 	if ( isset( $success ) ) {
-		if ( 'new' == $data['cpt_type_status'] ) {
+		if ( 'new' === $data['cpt_type_status'] ) {
 			return 'add_success';
 		}
 	}
