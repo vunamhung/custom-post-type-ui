@@ -726,7 +726,7 @@ add_action( 'admin_init', 'cptui_convert_settings' );
  */
 function cptui_admin_notices( $action = '', $object_type = '', $success = true, $custom = '' ) {
 
-	$class = array();
+	$class   = array();
 	$class[] = ( $success ) ? 'updated' : 'error';
 	$class[] = 'notice is-dismissible';
 	$object_type = esc_attr( $object_type );
