@@ -117,7 +117,7 @@ add_filter( 'cptui_get_tabs', 'cptui_taxonomy_tabs', 10, 2 );
  */
 function cptui_manage_taxonomies() {
 
-	$tab = ( ! empty( $_GET ) && ! empty( $_GET['action'] ) && 'edit' == $_GET['action'] ) ? 'edit' : 'new';
+	$tab = ( ! empty( $_GET ) && ! empty( $_GET['action'] ) && 'edit' === $_GET['action'] ) ? 'edit' : 'new';
 	$tab_class = 'cptui-' . $tab; ?>
 
 	<div class="wrap <?php echo esc_attr( $tab_class ); ?>">
@@ -149,7 +149,7 @@ function cptui_manage_taxonomies() {
 	 */
 	do_action( 'cptui_below_taxonomy_tab_menu' );
 
-	if ( 'edit' == $tab ) {
+	if ( 'edit' === $tab ) {
 
 		$taxonomies = cptui_get_taxonomy_data();
 
@@ -211,7 +211,7 @@ function cptui_manage_taxonomies() {
 							echo $ui->get_tr_start() . $ui->get_th_start();
 							echo $ui->get_label( 'name', esc_html__( 'Taxonomy Slug', 'custom-post-type-ui' ) ) . $ui->get_required_span();
 
-							if ( 'edit' == $tab ) {
+							if ( 'edit' === $tab ) {
 								echo '<p id="slugchanged" class="hidemessage">' . __( 'Slug has changed', 'custom_post_type_ui' ) . '</p>';
 							}
 							echo $ui->get_th_end() . $ui->get_td_start();
@@ -231,7 +231,7 @@ function cptui_manage_taxonomies() {
 							esc_html_e( 'Slugs should only contain alphanumeric, latin characters. Underscores or dashes should be used in place of spaces.', 'custom-post-type-ui' );
 							echo '</p>';
 
-							if ( 'edit' == $tab ) {
+							if ( 'edit' === $tab ) {
 								echo '<p>';
 								esc_html_e( 'DO NOT EDIT the taxonomy slug unless also planning to migrate terms. Changing the slug registers a new taxonomy entry.', 'custom-post-type-ui' );
 								echo '</p>';
@@ -324,7 +324,7 @@ function cptui_manage_taxonomies() {
 						</table>
 						<p class="submit">
 							<?php wp_nonce_field( 'cptui_addedit_taxonomy_nonce_action', 'cptui_addedit_taxonomy_nonce_field' );
-							if ( ! empty( $_GET ) && ! empty( $_GET['action'] ) && 'edit' == $_GET['action'] ) { ?>
+							if ( ! empty( $_GET ) && ! empty( $_GET['action'] ) && 'edit' === $_GET['action'] ) { ?>
 								<?php
 
 								/**
@@ -1087,7 +1087,7 @@ function cptui_update_taxonomy( $data = array() ) {
 		return cptui_admin_notices( 'error', '', false, esc_html__( 'Please provide a post type to attach to.', 'custom-post-type-ui' ) );
 	}
 
-	if ( ! empty( $data['tax_original'] ) && $data['tax_original'] != $data['cpt_custom_tax']['name'] ) {
+	if ( ! empty( $data['tax_original'] ) && $data['tax_original'] !== $data['cpt_custom_tax']['name'] ) {
 		if ( ! empty( $data['update_taxonomy'] ) ) {
 			add_filter( 'cptui_convert_taxonomy_terms', '__return_true' );
 		}
@@ -1122,7 +1122,7 @@ function cptui_update_taxonomy( $data = array() ) {
 	 * @param array  $post_types Array of existing post types from CPTUI.
 	 */
 	$slug_exists = apply_filters( 'cptui_taxonomy_slug_exists', false, $data['cpt_custom_tax']['name'], $taxonomies );
-	if ( 'new' == $data['cpt_tax_status'] ) {
+	if ( 'new' === $data['cpt_tax_status'] ) {
 		if ( true === $slug_exists ) {
 			add_filter( 'cptui_custom_error_message', 'cptui_slug_matches_taxonomy' );
 			return 'error';
@@ -1209,7 +1209,7 @@ function cptui_update_taxonomy( $data = array() ) {
 	set_transient( 'cptui_flush_rewrite_rules', 'true', 5 * 60 );
 
 	if ( isset( $success ) ) {
-		if ( 'new' == $data['cpt_tax_status'] ) {
+		if ( 'new' === $data['cpt_tax_status'] ) {
 			return 'add_success';
 		}
 	}
