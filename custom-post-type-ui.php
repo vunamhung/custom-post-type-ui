@@ -411,6 +411,11 @@ function cptui_register_single_post_type( $post_type = array() ) {
 		$rest_base = $post_type['rest_base'];
 	}
 
+	$capability_type = $post_type['capability_type'];
+	if ( false !== strpos( $post_type['capability_type'], ',' ) ) {
+		$capability_type = explode( ',', $post_type['capability_type'] );
+	}
+
 	$args = array(
 		'labels'              => $labels,
 		'description'         => $post_type['description'],
@@ -423,7 +428,7 @@ function cptui_register_single_post_type( $post_type = array() ) {
 		'show_in_rest'        => get_disp_boolean( $post_type['show_in_rest'] ),
 		'rest_base'           => $rest_base,
 		'exclude_from_search' => $exclude_from_search,
-		'capability_type'     => $post_type['capability_type'],
+		'capability_type'     => $capability_type,
 		'map_meta_cap'        => $post_type['map_meta_cap'],
 		'hierarchical'        => get_disp_boolean( $post_type['hierarchical'] ),
 		'rewrite'             => $rewrite,
