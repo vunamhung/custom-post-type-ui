@@ -413,7 +413,7 @@ function cptui_register_single_post_type( $post_type = array() ) {
 
 	$capability_type = $post_type['capability_type'];
 	if ( false !== strpos( $post_type['capability_type'], ',' ) ) {
-		$capability_type = explode( ',', $post_type['capability_type'] );
+		$capability_type = array_map( 'trim', explode( ',', $post_type['capability_type'] ) );
 	}
 
 	$args = array(
