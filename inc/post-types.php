@@ -2214,6 +2214,7 @@ function cptui_update_post_type( $data = array() ) {
 		$label                      = str_replace( '"', '', htmlspecialchars_decode( $label ) );
 		$label                      = htmlspecialchars( $label, ENT_QUOTES );
 		$label                      = trim( $label );
+
 		if ( 'parent' === $key ) {
 			$data['cpt_labels']['parent_item_colon'] = stripslashes_deep( $label );
 		} else {
