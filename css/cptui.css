@@ -471,7 +471,3 @@ fieldset .cptui-help {
   -ms-grid-row-align: auto;
       align-self: auto;
 }
-
-.no-js #cptui_choose_icon {
-  display: none;
-}
