@@ -485,3 +485,13 @@ $max-tablet: "screen and (max-width: 768px)";
   	display: none
 	}
 }
+.post-type-listing {
+  th {
+	width: 16.66667%;
+  }
+}
+.taxonomy-listing {
+  th {
+	width: 20%;
+  }
+}
