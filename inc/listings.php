@@ -39,6 +39,7 @@ function cptui_listings() {
 			echo '<h2 id="post-types">' . esc_html__( 'Post Types', 'custom-post-type-ui' ) . '</h2>';
 			if ( ! empty( $post_types ) ) {
 			?>
+
 			<p><?php
 			printf(
 				/* translators: %s: Total count of registered CPTUI post types */
@@ -251,6 +252,7 @@ function cptui_listings() {
 			echo '<h2 id="taxonomies">' . esc_html__( 'Taxonomies', 'custom-post-type-ui' ) . '</h2>';
 			if ( ! empty( $taxonomies ) ) {
 				?>
+
 				<p>
 				<?php
 				printf(
