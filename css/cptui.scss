@@ -479,3 +479,8 @@ $max-tablet: "screen and (max-width: 768px)";
 	align-self: auto;
   }
 }
+.no-js {
+  #cptui_choose_icon {
+	display: none
+  }
+}
