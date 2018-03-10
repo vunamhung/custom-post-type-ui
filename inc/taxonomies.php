@@ -916,7 +916,7 @@ function cptui_manage_taxonomies() {
 				<?php } ?>
 
 				<?php if ( ! empty( $current ) ) { ?>
-					<input type="hidden" name="tax_original" id="tax_original" value="<?php echo $current['name']; ?>" />
+					<input type="hidden" name="tax_original" id="tax_original" value="<?php echo esc_attr( $current['name'] ); ?>" />
 				<?php }
 
 				// Used to check and see if we should prevent duplicate slugs. ?>
