@@ -117,6 +117,7 @@ Fixed: Error occurred when attempting to unset post types while editing a taxono
 * Added: No need to refresh page after initial save to see post types and taxonomies in menu.
 * Added: Taxonomy support for show_in_menu and show_in_nav_menus.
 * Fixed: Further improved labels for information text on inputs.
+* Added: Support for "publicly_queryable" parameter
 * Fixed: Hide "choose icon" button for non-js users.
 * Fixed: Issue with misused "parent" label key that should be parent_item_colon.
 * Fixed: Missed show_in_menu_string parameter for "get code" area.
@@ -211,6 +212,7 @@ Fixed: "show in nav menus" missing from tools section for post type section.
 * Added: No need to refresh page after initial save to see post types and taxonomies in menu.
 * Added: Taxonomy support for show_in_menu and show_in_nav_menus.
 * Fixed: Further improved labels for information text on inputs.
+* Added: Support for "publicly_queryable" parameter
 * Fixed: Hide "choose icon" button for non-js users.
 * Fixed: Issue with misused "parent" label key that should be parent_item_colon.
 * Fixed: Missed show_in_menu_string parameter for "get code" area.
