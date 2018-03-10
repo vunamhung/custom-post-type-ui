@@ -548,6 +548,14 @@ fieldset .cptui-help {
   width: 16.66667%;
 }
 
-.taxonomy-listing th {
+.cptui-listings th {
+  font-weight: bold;
+}
+
+.cptui-listings .post-type-listing th {
+  width: 16.66667%;
+}
+
+.cptui-listings .taxonomy-listing th {
   width: 20%;
 }
