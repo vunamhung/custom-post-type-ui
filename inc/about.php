@@ -72,6 +72,19 @@ function cptui_settings() {
 					<h2><?php esc_html_e( 'Multiple issue fixes.', 'custom-post-type-ui' ); ?></h2>
 					<p><?php esc_html_e( 'We have fixed the following issues in this version. Added "action" as a reserved taxonomy name. Updated `get_terms()` handling for WordPress 4.5. Fixed PHP notices related to rewrite indexes, that were present since version 1.0.6. Prevented triggering a slug conversion when tabbing through the edit screen.', 'custom-post-type-ui' ) ?></p>
 				</div>
+				<h2><?php esc_html_e( 'From our previous release:', 'custom-post-type-ui' ); ?></h2>
+				<div>
+					<h2><?php _e( 'Slug prevention measures', 'custom-post-type-ui' ); ?></h2>
+					<p><?php _e( 'We added measures on the post type and taxonomy slug inputs to prevent using characters that should not be used in slugs. This is primarily for when adding new post types and taxonomies, but will also affect when editing existing options. Do not hesitate to contact support if you are experiencing issues.' ) ?></p>
+				</div>
+				<div>
+					<h2><?php _e( 'Improved rewrite rules flushing', 'custom-post-type-ui' ); ?></h2>
+					<p><?php _e( 'We improved what we do after registering a new post type or taxonomy to better prevent having to manually flush rewrite rules.' ) ?></p>
+				</div>
+				<div class="last-feature">
+					<h2><?php _e( 'Continued accessibility improvements', 'custom-post-type-ui' ); ?></h2>
+					<p><?php _e( 'We have continued working on the accessibility of the plugin, building off what we accomplished in previous releases. If you have feedback on where it could be further improved, let us know.' ) ?></p>
+				</div>
 			</div>
 		</div>
 
