@@ -211,7 +211,11 @@ function cptui_get_taxonomy_slugs() {
  * @since 1.3.0
  *
  * @param string $path URL path.
+<<<<<<< HEAD
  * @return string
+=======
+ * @return string|void
+>>>>>>> merge in issues 457-norefresh and 466-collapse-box-ui
  */
 function cptui_admin_url( $path ) {
 	if ( is_multisite() && is_network_admin() ) {

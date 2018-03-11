@@ -657,6 +657,7 @@ function cptui_manage_taxonomies() {
 									),
 								),
 							);
+
 							$selected           = ( isset( $current ) ) ? disp_boolean( $current['show_in_menu'] ) : '';
 							$select['selected'] = ( ! empty( $selected ) ) ? $current['show_in_menu'] : '';
 							echo $ui->get_select_input( array(
@@ -697,6 +698,7 @@ function cptui_manage_taxonomies() {
 									),
 								),
 							);
+
 							$selected           = ( isset( $current ) ) ? disp_boolean( $current['query_var'] ) : '';
 							$select['selected'] = ( ! empty( $selected ) ) ? $current['query_var'] : '';
 							echo $ui->get_select_input( array(
@@ -860,6 +862,7 @@ function cptui_manage_taxonomies() {
 								'labeltext' => esc_html__( 'Metabox callback', 'custom-post-type-ui' ),
 								'helptext'  => esc_html__( 'Sets a callback function name for the meta box display. Hierarchical default: post_categories_meta_box, non-hierarchical default: post_tags_meta_box.', 'custom-post-type-ui' ),
 							) );
+
 							?>
 						</table>
 					</div>
@@ -912,11 +915,11 @@ function cptui_manage_taxonomies() {
 					 * @param string $value Text to use for the button.
 					 */
 					?>
-					<input type="submit" class="button-primary cptui-taxonomy-submit" name="cpt_submit" value="<?php echo esc_attr( apply_filters( 'cptui_taxonomy_submit_add', esc_attr__( 'Add Taxonomy', 'custom-post-type-ui' ) ) ); ?>" />
+					<input type="submit" class="button-primary" name="cpt_submit" value="<?php echo esc_attr( apply_filters( 'cptui_taxonomy_submit_add', esc_attr__( 'Add Taxonomy', 'custom-post-type-ui' ) ) ); ?>" />
 				<?php } ?>
 
 				<?php if ( ! empty( $current ) ) { ?>
-					<input type="hidden" name="tax_original" id="tax_original" value="<?php echo esc_attr( $current['name'] ); ?>" />
+					<input type="hidden" name="tax_original" id="tax_original" value="<?php echo $current['name']; ?>" />
 				<?php }
 
 				// Used to check and see if we should prevent duplicate slugs. ?>
